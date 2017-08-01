@@ -1,5 +1,35 @@
-<h1>Order#received</h1>
+<h1>Ticket Raised</h1>
 
-<p>
-  <%= @greeting %>, find me in app/views/order_mailer/received.html.erb
-</p>
+<p>Dear Call Center Rep,</p>
+
+<p>A ticket requires your attention!</p>
+
+<h3>Your ticket consists of:</h3>
+<table>
+  <tr>
+    <th>Company Name</th>
+    <th>Machine Serial Number</th>
+    <th>Machine Location</th>
+    <th>Contact Person</th>
+    <th>Contact Number</th>
+    <th>Problem Description</th>
+    <th>Time to Avoid</th>
+    <th>Office Closing Time</th>
+    <th>Special Instructions</th>
+    <th>Ticket Number</th>
+  </tr>
+  <tr>
+    <td><%= @ticket.company %></td>
+    <td><%= @ticket.serial %></td>
+    <td><%= @ticket.machine_location %></td>
+    <td><%= @ticket.contact_person %></td>
+    <td><%= @ticket.contract_number %></td>
+    <td><%= @ticket.problem_description %></td>
+    <td><%= @ticket.avoid_time.strftime("%I:%M %p") %> to <%=@ticket.avoid_time_end.strftime("%I:%M %p") %></td>
+    <td><%= @ticket.office_closing_time.strftime("%I:%M %p") %></td>
+    <td><%= @ticket.special_instructions %></td>
+    <td><%= @ticket.ticket_no %></td>
+  </tr>
+</table>
+
+<p>Thank you.</p>
