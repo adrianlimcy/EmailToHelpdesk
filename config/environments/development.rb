@@ -30,20 +30,20 @@ Rails.application.configure do
   # Changed to true to see if there are problems.
 
   config.action_mailer.raise_delivery_errors = true
-
+  config.action_mailer.delivery_method = :test
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: "localhost:3000" }
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: ENV["SMTP_HOST"],
-    port: 587,
-    domain: ENV["DOMAIN"],
-    user_name: ENV["USERNAME"],
-    password: ENV["PASSWORD"],
-    authentication: :login,
-    enable_starttls_auto: true
-  }
+  #config.action_mailer.default_url_options = { host: "localhost:3000" }
+  #config.action_mailer.perform_deliveries = true
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #  address: ENV["SMTP_HOST"],
+  #  port: 587,
+  #  domain: ENV["DOMAIN"],
+  #  user_name: ENV["USERNAME"],
+  #  password: ENV["PASSWORD"],
+  #  authentication: :login,
+  #  enable_starttls_auto: true
+  #}
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

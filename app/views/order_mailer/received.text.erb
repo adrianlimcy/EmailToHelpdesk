@@ -9,7 +9,7 @@ Machine Location: <%= @ticket.machine_location %>
 Contact Person: <%= @ticket.contact_person %>
 Contract Number: <%= @ticket.contract_number %>
 Problem Desciption: <%= @ticket.problem_description %>
-Lunchtime / Time to avoid: <%= @ticket.avoid_time %>
-Office Closing Time: <%= @ticket.office_closing_time %>
+Lunchtime / Time to avoid: <%= @ticket.avoid_time.strftime("%I:%M %p") %> to <%=@ticket.avoid_time_end.strftime("%I:%M %p") %>
+Office Closing Time: <%= @ticket.office_closing_time.strftime("%I:%M %p") %>
 Special Instructions: <%= @ticket.special_instructions %>
 Ticket Number (if any):<%= @ticket.ticket_no %>

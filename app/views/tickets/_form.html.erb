@@ -40,15 +40,21 @@
     <%= form.label :problem_description %>
     <%= form.text_area :problem_description, id: :ticket_problem_description %>
   </div>
-
-  <div class="field">
-    <%= form.label :avoid_time %>
-    <%= form.time_select :avoid_time, id: :ticket_avoid_time %>
+  <div>
+    <h3>Avoid Delivery or Service During</h3>
+    <div class="field">
+      <%= form.label :avoid_time, "Start" %>
+      <%= form.time_select :avoid_time, id: :ticket_avoid_time, default: {hour: '12', minute: '00'} %>
+    </div>
+    <div class="field">
+      <%= form.label :avoid_time_end, "End" %>
+      <%= form.time_select :avoid_time_end, id: :ticket_avoid_time_end, default: {hour: '13', minute: '30'} %>
+    </div>
   </div>
 
   <div class="field">
     <%= form.label :office_closing_time %>
-    <%= form.time_select :office_closing_time, id: :ticket_office_closing_time %>
+    <%= form.time_select :office_closing_time, id: :ticket_office_closing_time, default: {hour: '17', minute: '30'} %>
   </div>
 
   <div class="field">
