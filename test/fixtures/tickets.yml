@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: MyString
+  serial: MyString
+  machine_location: MyString
+  contact_person: MyString
+  contract_number: MyString
+  problem_description: MyText
+  avoid_time: 2017-08-01 10:08:05
+  office_closing_time: 2017-08-01 10:08:05
+  special_instructions: MyText
+  ticket_no: MyString
+
+two:
+  company: MyString
+  serial: MyString
+  machine_location: MyString
+  contact_person: MyString
+  contract_number: MyString
+  problem_description: MyText
+  avoid_time: 2017-08-01 10:08:05
+  office_closing_time: 2017-08-01 10:08:05
+  special_instructions: MyText
+  ticket_no: MyString

@@ -1,0 +1,67 @@
+<%= form_with(model: ticket, local: true) do |form| %>
+  <% if ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+      <% ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company, id: :ticket_company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :serial %>
+    <%= form.text_field :serial, id: :ticket_serial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :machine_location %>
+    <%= form.text_field :machine_location, id: :ticket_machine_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_person %>
+    <%= form.text_field :contact_person, id: :ticket_contact_person %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contract_number %>
+    <%= form.text_field :contract_number, id: :ticket_contract_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :problem_description %>
+    <%= form.text_area :problem_description, id: :ticket_problem_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avoid_time %>
+    <%= form.time_select :avoid_time, id: :ticket_avoid_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :office_closing_time %>
+    <%= form.time_select :office_closing_time, id: :ticket_office_closing_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :special_instructions %>
+    <%= form.text_area :special_instructions, id: :ticket_special_instructions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ticket_no %>
+    <%= form.text_field :ticket_no, id: :ticket_ticket_no %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
