@@ -1,14 +1,15 @@
 class OrderMailer < ApplicationMailer
+  default from: 'helpdesk@ricohmds.onmicrosoft.com'
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
   #   en.order_mailer.received.subject
   #
-  def received
-    @greeting = "Hi"
+  def received(ticket)
+    @ticket = ticket
 
-    mail to: "to@example.org"
+    mail to: "adrianlim@ricoh.sg", subject: 'testing'
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml

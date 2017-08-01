@@ -1,3 +1,15 @@
-Order#received
+Dear Call Center Rep,
 
-<%= @greeting %>, find me in app/views/order_mailer/received.text.erb
+A ticket requires your attention!
+
+Your ticket consists of:
+Company Name: <%= @ticket.company %>
+Machine Serial Number: <%= @ticket.serial %>
+Machine Location: <%= @ticket.machine_location %>
+Contact Person: <%= @ticket.contact_person %>
+Contract Number: <%= @ticket.contract_number %>
+Problem Desciption: <%= @ticket.problem_description %>
+Lunchtime / Time to avoid: <%= @ticket.avoid_time %>
+Office Closing Time: <%= @ticket.office_closing_time %>
+Special Instructions: <%= @ticket.special_instructions %>
+Ticket Number (if any):<%= @ticket.ticket_no %>
